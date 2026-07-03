@@ -1,14 +1,14 @@
 public class TesteReferencias {
     public static void main(String[] args) {
-        Conta primeiraConta = new Conta();
-        primeiraConta.saldo = 300;
-        System.out.println("saldo da primeira " + primeiraConta.saldo);
+        Conta primeiraConta = new Conta(0, 0);
+        primeiraConta.getSaldo(()) = 300;
+        System.out.println("saldo da primeira " + primeiraConta.getSaldo());
 
         Conta segundaConta = primeiraConta;
-        System.out.println("saldo da segunda conta: " + segundaConta.saldo);
+        System.out.println("saldo da segunda conta: " + segundaConta.getSaldo());
 
-        segundaConta.saldo += 100;
-        System.out.println("saldo da segunda conta: " + segundaConta.saldo);
+        segundaConta.getSaldo() += 100;
+        System.out.println("saldo da segunda conta: " + segundaConta.getSaldo());
 
         System.out.println(primeiraConta.saldo);
 
