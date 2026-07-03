@@ -1,27 +1,27 @@
 public class TestaMetodo {
     public static void main(String[] args) {
-        Conta contaDoPaulo = new Conta();
-        contaDoPaulo.saldo = 100;
-        contaDoPaulo.deposita(50);
-        System.out.println(contaDoPaulo.saldo);
+		Conta contaDoPaulo = new Conta(6646,969060);
+		contaDoPaulo.deposita(100);
+		contaDoPaulo.deposita(50);
+		System.out.println(contaDoPaulo.getSaldo());
 
-        boolean conseguiuRetirar = contaDoPaulo.saca(20);
-        System.out.println(contaDoPaulo.saldo);
-        System.out.println(conseguiuRetirar);
+		boolean conseguiuRetirar = contaDoPaulo.saca(20);
+		System.out.println(contaDoPaulo.getSaldo());
+		System.out.println(conseguiuRetirar);
 
-        Conta contaDaMarcela = new Conta();
-        contaDaMarcela.deposita(1000);
+		Conta contaDaMarcela = new Conta(6644,969063);
+		contaDaMarcela.deposita(1000);
 
-        boolean sucessoTransferencia = 
-                contaDaMarcela.transfere(3000, contaDoPaulo);
+		boolean sucessoTransferencia = contaDaMarcela.transfere(300, contaDoPaulo);
 
-        if(sucessoTransferencia) {
-            System.out.println("transferencia com sucesso");
-        } else {
-            System.out.println("faltou dinheiro");
-        }
+		if (sucessoTransferencia) {
+			System.out.println("transferencia com sucesso");
 
-        System.out.println(contaDaMarcela.saldo);
-        System.out.println(contaDoPaulo.saldo);
-    }
+		} else {
+			System.out.println("faltou dinheiro");
+
+		}
+		System.out.println(contaDaMarcela.getSaldo());
+		System.out.println(contaDoPaulo.getSaldo());
+	}
 }

@@ -1,35 +1,18 @@
 public class CriaConta {
     public static void main(String[] args) {
-        Conta primeiraConta = new Conta();
-        primeiraConta.saldo = 200;
-        System.out.println(primeiraConta.saldo);
+        Conta primeiraConta = new Conta(6646,969060);
+        primeiraConta.deposita(200);
+        System.out.println(primeiraConta.getSaldo());
 
-        primeiraConta.saldo += 100;
-        System.out.println(primeiraConta.saldo);
+        primeiraConta.deposita(100);
+        System.out.println(primeiraConta.getSaldo());
 
-        Conta segundaConta = new Conta();
-        segundaConta.saldo = 300;
+        Conta segundaConta = new Conta(6645,969061);
+        segundaConta.deposita(50);
 
-        System.out.println("a primeira conta tem: " + primeiraConta.saldo);
-        System.out.println("a segunda conta tem: " + segundaConta.saldo);
+        System.out.println("primeira conta tem " + primeiraConta.getSaldo());
+        System.out.println("segunda conta tem " + segundaConta.getSaldo());
 
-        primeiraConta.agencia = 146;
-        System.out.println(primeiraConta.agencia);
-        System.out.println(primeiraConta.numero);
-
-        System.out.println(segundaConta.agencia);
-
-        segundaConta.agencia = 146;
-        System.out.println("agora a segunda conta esta " 
-        + "na agencia " + segundaConta.agencia);
-
-        if (primeiraConta == segundaConta) {
-            System.out.println("mesma coisa");
-        } else {
-            System.out.println("contas diferentes");
-        }
-
-        System.out.println(primeiraConta);
-        System.out.println(segundaConta);
+        System.out.println("referenciar: " + primeiraConta);
     }
 }
